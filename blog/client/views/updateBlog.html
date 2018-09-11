@@ -1,0 +1,39 @@
+<div id="contact" class="container-fluid ">
+  <div class="row">
+    <div class="col-sm-6 form-group">
+      <label for="title">Title of Blog:</label>
+       <input class="form-control" id="title" ng-model="title"
+      type="text" ng-value ="blogData.title" required>
+    </div>
+    <div class="col-sm-6 form-group">
+        <label for="category">Category of Blog:</label>
+        <select class="form-control" id="category" ng-value ="blogData.category" ng-model="categoryByUser">
+          <option>Technology</option>
+          <option>Real Estate</option>
+          <option>Nature</option>
+          <option>Personal Blog</option>
+       </select>
+    </div>
+    <div class="col-sm-6 form-group">
+        <label for="tags">Tags of Blog:</label>
+      <input class="form-control" id="tags" ng-model="tags" ng-value ="blogData.tags" type="text" required>
+    </div>
+    <div class="col-sm-6 form-group">
+        <label for="author_name">Author Name:</label>
+      <input class="form-control" id="author_name" ng-value ="blogData.tags" ng-model="author_name" placeholder="Author Name" type="text" required>
+    </div>
+    <div class="col-sm-6 form-group">
+        <label for="author.age">Author Email</label>
+      <input class="form-control" id="author_email" ng-value ="blogData.authorInfo.email" ng-model="author_email" placeholder="Author email"
+      type="email" required>
+    </div>
+  </div>
+  <label for="body">Blog Content</label>
+  <textarea class="form-control" id="body" ng-model="body" ng-value ="blogData.body" rows="8"></textarea><br>
+  <div class="row">
+    <div class="col-sm-12 form-group">
+      <button class="btn btn-default pull-right" type="submit" ng-click="sentRequest()">Done</button>
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "name": "Blog",
+  "version": "1.0.0",
+  "description": "CRUD based Blog application with stylish Front End",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "lokendra",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.12",
+    "morgan": "^1.9.0",
+    "uniqid": "^5.0.3"
+  }
+}

@@ -1,0 +1,19 @@
+myApp.config(['$routeProvider',function($routeProvider){
+  $routeProvider
+  .when('/',{
+    templateUrl:'../views/home.html'
+  })
+  .when('/createBlog',{
+    templateUrl:'../views/createBlog.html',
+    controller:"createBlogCtrl"
+  })
+  .when('/allBlogs',{
+    templateUrl:'../views/blogs.html',
+    controller:"viewBlogCtrl"
+  })
+  .when('/updateBlog/:id',{
+    templateUrl:'../views/updateBlog.html',
+    controller:"updateBlogCtrl"
+  })
+}])
+console.log('wdwed');

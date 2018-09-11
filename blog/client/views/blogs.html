@@ -1,0 +1,97 @@
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+              <div style="text-align:center">
+                <a class="btn btn-danger btn-block" href="#"><span class="glyphicon glyphicon-home"></span>
+                  Home
+                </a>
+              </div><br>
+                <!-- Blog Search Well -->
+                <div class="well">
+                    <h4>Blog Search</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="searchText">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Blog Categories</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Technology</a>
+                                </li>
+                                <li><a href="#">Real Estate</a>
+                                </li>
+                                <li><a href="#">Personal Diaries</a>
+                                </li>
+                                <li><a href="#">Nature</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Funny Incidents</a>
+                                </li>
+                                <li><a href="#">Horror Experiences</a>
+                                </li>
+                                <li><a href="#">Pet Blogs</a>
+                                </li>
+                                <li><a href="#">Educational </a>
+                                </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                <!-- Side Widget Well -->
+                <div class="well">
+                    <img src="../images/blog.gif" alt="blog.gif" class="img-thumbnail img-responsive">
+                </div>
+
+            </div>
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <h1 class="page-header">
+                    Blogs
+                    <small> by Our Blogsters</small>
+                </h1>
+                <!-- First Blog Post -->
+                <div ng-repeat="blog in allBlogsData |filter:searchText">
+                  <h2>
+                    {{blog.title}}
+                  </h2>
+                  <p class="lead">
+                      by {{blog.authorInfo.fullName}}
+                  </p>
+                  <p><span class="glyphicon glyphicon-time"></span>
+                     Posted on {{blog.createdAt |date:"MM/dd/yyyy 'at' h:mma"}}
+                  </p>
+                  <hr>
+                  <img class="img-responsive" src="../images/sample.jpg" alt="">
+                  <hr>
+                  <p>{{blog.body| limitTo : numlimit : 0}}</p>
+
+                  <button class="btn btn-danger" ng-if="showReadBtn" ng-click="displayWholeBlog()">
+                    <span class="glyphicon glyphicon-chevron-right"></span>Read More
+                  </button>
+                  <a class="btn btn-success" href="#!updateBlog/{{blog._id}}" ng-if="showUpdateBtn"></span>Want to make changes?</a>
+
+                  <button class="btn btn-danger"  ng-if="showDeleteBtn" ng-click="deleteBlog(blog._id)">Delete</button>
+                  <hr>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
