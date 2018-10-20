@@ -4,8 +4,8 @@ Blog using Nodejs, Expressjs, Angularjs and Mongodb. MEAN Javascript Fullstack a
 
 Features
 
-Create/Edit/Delete Article<br/>
-Bcrypt Password Hash
+* Create/Edit/Delete Article<br/>
+* Bcrypt Password Hash
 
 ## Server Side Dependencies
 
